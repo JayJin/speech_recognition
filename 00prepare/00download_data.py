@@ -26,6 +26,10 @@ if __name__ == "__main__":
     # ディレクトリdata_dirが存在しない場合は作成する
     os.makedirs(data_dir, exist_ok=True)
 
+
+#####################################################################################
+# Audio Data Download and extract
+
     # 音声ファイル(jsutコーパス. zip形式)をダウンロード
     data_archive = os.path.join(data_dir, 'jsut-data.zip')
     print('download jsut-data start')
@@ -41,6 +45,9 @@ if __name__ == "__main__":
 
     # zipファイルを削除する
     os.remove(data_archive)
+
+#####################################################################################
+# Lable Data Download and extract
 
     # jsutコーパスのラベルデータをダウンロード
     label_archive = os.path.join(data_dir, 'jsut-label.zip')
